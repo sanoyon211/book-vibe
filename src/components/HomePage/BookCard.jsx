@@ -11,7 +11,7 @@ const BookCard = ({ book }) => {
         <img
           src={book.image}
           alt="Shoes"
-          className=" w-[220px] h-[300px] shadow-lg object-cover object-center rounded-md"
+          className=" w-55 h-75 shadow-lg object-cover object-center rounded-md"
         />
       </div>
       <div className="space-y-4 mt-4">

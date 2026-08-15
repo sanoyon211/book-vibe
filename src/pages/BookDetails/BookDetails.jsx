@@ -1,12 +1,17 @@
+import { useContext } from 'react';
 import { FaRegStar } from 'react-icons/fa';
 import { useLoaderData, useParams } from 'react-router';
+import { BookContext } from '../../BookContext/BookContext';
 
 const BookDetails = () => {
   const { id } = useParams();
   const books = useLoaderData();
 
+  const { handleReadBooks, handleWishlistBooks } = useContext(BookContext);
+
+
   const expectedBook = books.find(book => book.bookId == id);
-  console.log(expectedBook);
+
 
   return (
     <div className="container mx-auto my-10">
@@ -61,8 +66,16 @@ const BookDetails = () => {
             </div>
           </div>
           <div className="flex items-center gap-6">
-            <button className="btn btn-outline font-bold text-lg">Read</button>
-            <button className="btn btn-accent text-white text-lg font-bold">
+            <button
+              className="btn btn-outline font-bold text-lg"
+              onClick={() => handleReadBooks(expectedBook)}
+            >
+              Read
+            </button>
+            <button
+              className="btn btn-accent text-white text-lg font-bold "
+              onClick={() => handleWishlistBooks(expectedBook)}
+            >
               Wishlist
             </button>
           </div>

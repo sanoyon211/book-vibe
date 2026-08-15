@@ -5,7 +5,6 @@ const booksData = fetch('/booksData.json').then(res => res.json());
 
 const AllBooks = () => {
   const bookData = use(booksData);
-  console.log(bookData);
 
   return (
     <>
