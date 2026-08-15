@@ -3,7 +3,7 @@ import HeroImg from './../../assets/pngwing 1.png';
 const Banner = () => {
   return (
     <div className="hero ">
-      <div className="hero-content flex-col lg:flex-row-reverse lg:justify-between p-2 lg:p-8  rounded-xl shadow-2xl my-12">
+      <div className="hero-content flex-col lg:flex-row-reverse lg:justify-between p-2 lg:p-8  rounded-xl bg-gray-200 my-12">
         <img
           alt="Tailwind CSS hero component"
           src={HeroImg}
