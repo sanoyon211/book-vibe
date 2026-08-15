@@ -1,10 +1,11 @@
+import AllBooks from "../../components/HomePage/AllBooks";
 
 
 const Books = () => {
   return (
-    <div>
-      Books page
-    </div>
+    <>
+      <AllBooks></AllBooks>
+    </>
   );
 };
 
